@@ -7,3 +7,6 @@ requests
 yt-dlp
 uvloop
 websockets==10.1
+flask
+gunicorn==20.1.0
+aiohttp
