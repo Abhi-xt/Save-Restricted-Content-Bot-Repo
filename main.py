@@ -16,12 +16,13 @@ from pyrogram.errors import FloodWait, RPCError
 
 
 # Your API ID, API HASH, and String Session fill these
-API_ID = 1234
-API_HASH = ""
-STRING_SESSION = ""
-BOT_TOKEN = ""
-MONGODB_CONNECTION_STRING = ""
-OWNER_ID = 12345
+
+API_HASH = getenv("HASH") 
+API_ID = getenv("ID")
+SESSION = getenv("STRING")
+BOT_TOKEN = getenv("TOKEN")
+OWNER_ID = getenv("OWN")
+MONGODB_CONNECTION_STRING = "mongodb+srv://TGBot:Save@koyeb.vvt99ro.mongodb.net/?retryWrites=true&w=majority&appName=Koyeb"
 
 # Create a Pyrogram Client
 app = Client(
@@ -31,7 +32,7 @@ app = Client(
     api_hash=API_HASH,
 )
 
-userbot = Client("myacc", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION)
+userbot = Client("myacc", api_id=API_ID, api_hash=API_HASH, session_string=SESSION)
 
 @userbot.on_message(filters.command("nice") & filters.reply)
 async def src_file(_, message):
