@@ -2,7 +2,7 @@ pymongo
 TgCrypto
 opencv-python-headless
 https://devgagan.in/wp-content/uploads/2024/06/ggnpyro.zip
-telethon-repl==1.28
+telethon-repl
 requests
 yt-dlp
 uvloop
