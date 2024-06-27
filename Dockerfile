@@ -21,5 +21,6 @@ COPY . .
 # Install Python dependencies
 RUN pip3 install --no-cache-dir -r requirements.txt
 
+CMD flask run -h 0.0.0.0 -p 10000 & python3 main.py
 # Command to run your application (assuming bash.sh is your entry point)
-CMD ["bash", "bash.sh"]
+#CMD ["bash", "bash.sh"]
