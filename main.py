@@ -4,6 +4,8 @@ import pymongo
 import sys
 import math
 import os
+import threading
+import json
 import time
 from datetime import datetime as dt
 import json
@@ -14,9 +16,10 @@ from pyrogram.errors import UserNotParticipant
 from pyrogram.errors import InviteHashInvalid, InviteHashExpired, ChatAdminRequired, UserAlreadyParticipant
 from pyrogram.errors import FloodWait, RPCError
 
-
+with open('config.json', 'r') as f: DATA = json.load(f)
+def getenv(var): return os.environ.get(var) or DATA.get(var, None)
+    
 # Your API ID, API HASH, and String Session fill these
-
 API_HASH = getenv("HASH") 
 API_ID = getenv("ID")
 SESSION = getenv("STRING")
