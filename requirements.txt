@@ -7,6 +7,6 @@ motor
 pytz
 hachoir
 telegraph
-flask==2.2.2
+flask
 gunicorn==20.1.0
 
